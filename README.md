@@ -12,6 +12,11 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * [npm](http://npmjs.org/): `npm install suitcss-components-form-field`
 * Download: [zip](https://github.com/simonsmith/suitcss-components-form-field/releases/latest)
 
+## Example
+
+* [**View a demo**](https://simonsmith.io/suitcss-components-form-field/test/demo.html)
+* [**View the tests**](https://simonsmith.io/suitcss-components-form-field/test/index.html)
+
 ## Available classes
 
 ### Component structure
