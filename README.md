@@ -88,8 +88,7 @@ root element:
 ### Controlling layout
 
 `FormField` leaves the layout concerns to another component or utility, for
-example [suitcss-components-grid](https://github.com/suitcss/components-grid) or
-[suitcss-utils-flex](https://github.com/suitcss/utils-flex).
+example [suitcss-components-grid](https://github.com/suitcss/components-grid).
 
 #### Vertical spacing
 
@@ -110,37 +109,19 @@ Can be handled by a component that controls the `<form/>` itself:
 </form>
 ```
 
-#### Horizontal positioning within `FormField`
+#### Horizontal positioning with `Grid` and `utils-size`
 
-Utilities can be used to control the layout of inputs and labels:
+The following achieves an inline form effect
 
 ```html
-// Produces an inline form layout
 <div class="FormField">
-  <div class="u-flex u-flexAlignItemsCenter">
-    <label class="FormField-label u-mr40">Surname</label>
-    <div class="u-flexGrow1">
-      <input class="FormField-input" type="text" placeholder="Enter your surname">
-      <p class="FormField-text">Some text to the user about the input field</p>
+  <div class="Grid Grid--alignMiddle">
+    <div class="Grid-cell u-size2of12">
+      <label class="FormField-label u-textBold">Username</label>
     </div>
-  </div>
-</div>
-```
-
-#### Horizontal positioning of `FormField` components
-
-A `Grid` component can be used for a column based layout:
-
-```html
-<div class="Grid Grid--withGutter">
-  <div class="Grid-cell u-size1of2">
-    <div class="FormField">
-      // ...
-    </div>
-  </div>
-  <div class="Grid-cell u-size1of2">
-    <div class="FormField">
-      // ...
+    <div class="Grid-cell u-sizeFill">
+      <input class="FormField-input" type="text" value="SomeCoolUsername">
+      <p class="FormField-text">That username is already taken!</p>
     </div>
   </div>
 </div>
