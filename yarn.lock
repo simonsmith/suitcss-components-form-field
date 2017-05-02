@@ -1358,6 +1358,10 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
+normalize.css@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-6.0.0.tgz#22188c2707c911fb3ad3c1aac0677ff68661bea8"
+
 npmlog@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.0.2.tgz#d03950e0e78ce1527ba26d2a7592e9348ac3e75f"
@@ -2294,6 +2298,20 @@ sugarss@^0.2.0:
   dependencies:
     postcss "^5.2.4"
 
+suitcss-base@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/suitcss-base/-/suitcss-base-3.0.0.tgz#83dd53629c37adbdeac11ef6439a7f2ed955f05e"
+  dependencies:
+    normalize.css "^6.0.0"
+
+suitcss-components-button@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/suitcss-components-button/-/suitcss-components-button-6.0.0.tgz#20503ca1ac8eea3c9e63a00858ffa477c866945a"
+
+suitcss-components-grid@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/suitcss-components-grid/-/suitcss-components-grid-3.0.3.tgz#52e0b03659ceace60add000135b57a78b328c303"
+
 suitcss-components-test@*:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/suitcss-components-test/-/suitcss-components-test-1.0.0.tgz#3f6fbc763505e8c3735921795cbb38921f18cdee"
@@ -2328,9 +2346,17 @@ suitcss-preprocessor@^4.0.0:
     stylelint "^7.10.1"
     stylelint-config-suitcss "^11.0.0"
 
+suitcss-utils-before@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/suitcss-utils-before/-/suitcss-utils-before-1.0.1.tgz#977f1b46b65db140571ebe5f767a12a4a7bc4931"
+
 suitcss-utils-flex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/suitcss-utils-flex/-/suitcss-utils-flex-2.0.0.tgz#c0618dbd112891720b9c7f92a4200015f2909b02"
+
+suitcss-utils-size@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/suitcss-utils-size/-/suitcss-utils-size-2.0.0.tgz#c5816b5435bf1dc2f105a0bb17966a6c6e138784"
 
 supports-color@^2.0.0:
   version "2.0.0"

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FormField [component] demo - SUIT CSS</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="../build/demo.css">
+  </head>
+  <body>
+    <div class="Container">
+      <h1>FormField demo</h1>
+
+      <form class="Register" action="">
+
+        <div class="Register-field">
+          <div class="FormField is-error">
+            <label class="FormField-label u-textBold">Username</label>
+            <input class="FormField-input" type="text" value="SomeCoolUsername">
+            <p class="FormField-text">That username is already taken!</p>
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField">
+            <label class="FormField-label u-textBold">Email</label>
+            <input class="FormField-input" type="email">
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField">
+            <label class="FormField-label u-textBold">About you</label>
+            <textarea class="FormField-input"></textarea>
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField">
+            <label class="FormField-check">
+              <input class="FormField-input" type="checkbox">
+              <span class="FormField-label">I agree to all marketing material</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="Button Button--success">Sign up</button>
+
+      </form>
+
+      <form class="Register" action="">
+
+        <div class="Register-field">
+          <div class="FormField is-error">
+            <div class="Grid Grid--alignMiddle">
+              <div class="Grid-cell u-size2of12">
+                <label class="FormField-label u-textBold">Username</label>
+              </div>
+              <div class="Grid-cell u-sizeFill">
+                <input class="FormField-input" type="text" value="SomeCoolUsername">
+                <p class="FormField-text">That username is already taken!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField">
+            <div class="Grid Grid--alignMiddle">
+              <div class="Grid-cell u-size2of12">
+                <label class="FormField-label u-textBold">Email</label>
+              </div>
+              <div class="Grid-cell u-sizeFill">
+                <input class="FormField-input" type="email">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField">
+            <div class="Grid Grid--alignMiddle">
+              <div class="Grid-cell u-size2of12">
+                <label class="FormField-label u-textBold">About you</label>
+              </div>
+              <div class="Grid-cell u-sizeFill">
+                <textarea class="FormField-input"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Register-field">
+          <div class="FormField u-before2of12">
+            <label class="FormField-check">
+              <input class="FormField-input" type="checkbox">
+              <span class="FormField-label">I agree to all marketing material</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="u-before2of12">
+          <button class="Button Button--success">Sign up</button>
+        </div>
+
+      </form>
+
+    </div>
+  </body>
+</html>

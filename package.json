@@ -29,13 +29,19 @@
     "lint": "suitcss index.css build/lint.css && rm build/lint.css",
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "preprocess-demo": "suitcss -i test test/demo.css build/demo.css",
     "setup": "npm install",
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
   "devDependencies": {
+    "suitcss-base": "^3.0.0",
+    "suitcss-components-button": "^6.0.0",
+    "suitcss-components-grid": "^3.0.3",
     "suitcss-components-test": "*",
     "suitcss-preprocessor": "^4.0.0",
-    "suitcss-utils-flex": "^2.0.0"
+    "suitcss-utils-before": "^1.0.1",
+    "suitcss-utils-flex": "^2.0.0",
+    "suitcss-utils-size": "^2.0.0"
   }
 }

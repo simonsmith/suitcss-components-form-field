@@ -1,0 +1,51 @@
+@import "suitcss-base";
+@import "suitcss-utils-size/lib/size.css";
+@import "suitcss-utils-before/lib/before.css";
+@import "suitcss-components-grid";
+@import "suitcss-components-button";
+@import "../index.css";
+
+:root {
+  --FormField-input-borderColor: #777;
+  --FormField-input-borderRadius: 5px;
+  --FormField-input-color: #333;
+  --FormField-input-padding: 0.6em;
+  --FormField-text-fontSize: 14px;
+}
+
+body {
+  background-color: #444;
+}
+
+.Container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+h1 {
+  margin: .75em 0;
+  color: #999;
+}
+
+.Register {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  border: 3px solid #aaa;
+  margin-bottom: 50px;
+}
+
+.Register-field {
+  margin-bottom: 20px;
+}
+
+.u-textBold {
+  font-weight: bold;
+}
+
+.Button--success {
+  background-color: #5cb85c;
+  color: #f2f2f2;
+  border-radius: 5px;
+  border-color: color(#5cb85c shade(40%));
+}
