@@ -1,0 +1,41 @@
+{
+  "name": "suitcss-components-form-field",
+  "version": "0.1.0",
+  "description": "Form field component for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-components",
+    "suitcss",
+    "form",
+    "style"
+  ],
+  "homepage": "https://github.com/simonsmith/suitcss-components-form-field#readme",
+  "bugs": "https://github.com/simonsmith/suitcss-components-form-field/labels/bug",
+  "license": "MIT",
+  "author": "Simon Smith",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonsmith/suitcss-components-form-field"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "lint": "suitcss index.css build/lint.css && rm build/lint.css",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^4.0.0",
+    "suitcss-utils-flex": "^2.0.0"
+  }
+}

@@ -1,0 +1,196 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>FormField [component] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .u-mr20 {
+    margin-right: 20px;
+  }
+</style>
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/simonsmith/suit-components-form-field">FormField</a> tests</h1>
+
+  <h2 class="Test-describe">.FormField</h2>
+  <h3 class="Test-it">should render a label and input</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-label" for="surname">Surname</label>
+      <input class="FormField-input" type="text" id="surname" placeholder="Enter your surname">
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="summary">Textarea</label>
+      <textarea class="FormField-input" id="summary"></textarea>
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="dob">Date of birth</label>
+      <input class="FormField-input" type="date" id="dob">
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="file">Upload a file</label>
+      <input class="FormField-input" type="file" id="file">
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="password">Password</label>
+      <input class="FormField-input" type="password" id="password">
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="search">Search</label>
+      <input class="FormField-input" type="search" id="search">
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="range">Range</label>
+      <input class="FormField-input" type="range" id="range">
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render an optional help text</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <p class="FormField-text">Some text to the user about the input field</p>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should allow different elements to be used</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <p class="FormField-label">Surname</p>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <small class="FormField-text">Some text to the user about the input field</small>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render horizontally with additional utilities (suitcss-utils-flex)</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <div class="u-flex u-flexAlignItemsCenter">
+        <label class="FormField-label u-mr20">Surname</label>
+        <div class="u-flexGrow1">
+          <input class="FormField-input" type="text" placeholder="Enter your surname">
+          <p class="FormField-text">Some text to the user about the input field</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should allow a label element to be used</h3>
+  <div class="Test-run">
+    <label class="FormField">
+      <span class="FormField-label">Surname</span>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <span class="FormField-text">Some text to the user about the input field</span>
+    </label>
+  </div>
+
+  <h2 class="Test-describe">.FormField-check</h2>
+  <h3 class="Test-it">should render a checkbox or radio</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-check">
+        <input class="FormField-input" type="checkbox">
+        <span class="FormField-label">Surname</span>
+      </label>
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-check">
+        <input class="FormField-input" type="radio">
+        <span class="FormField-label">Surname</span>
+      </label>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should not be affected by source order</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-check">
+        <span class="FormField-label">Surname</span>
+        <input class="FormField-input" type="checkbox">
+      </label>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render help text</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-check">
+        <input class="FormField-input" type="checkbox">
+        <span class="FormField-label">Surname</span>
+      </label>
+      <span class="FormField-text">Some text about the choice above</span>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render multiple options with a help text</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-check">
+        <input class="FormField-input" name="shopping" type="radio">
+        <span class="FormField-label">Apples</span>
+      </label>
+      <label class="FormField-check">
+        <input class="FormField-input" name="shopping" type="radio">
+        <span class="FormField-label">Oranges</span>
+      </label>
+      <label class="FormField-check">
+        <input class="FormField-input" name="shopping" type="radio">
+        <span class="FormField-label">Pears</span>
+      </label>
+      <span class="FormField-text">Some text about the choices above</span>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.FormField disabled / readonly</h2>
+  <h3 class="Test-it">should visibly indicate form field is disabled</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" disabled placeholder="Enter your surname">
+    </div>
+  </div>
+
+  <h3 class="Test-it">same styles apply to readonly</h3>
+  <div class="Test-run">
+    <div class="FormField">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" readonly placeholder="Enter your surname">
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.FormField validation</h2>
+  <h3 class="Test-it">should render an error colour</h3>
+  <div class="Test-run">
+    <div class="FormField is-error">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <p class="FormField-text">There was a problem!</p>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render a warning colour</h3>
+  <div class="Test-run">
+    <div class="FormField is-warning">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <p class="FormField-text">There was almost a problem!</p>
+    </div>
+  </div>
+
+  <h3 class="Test-it">should render a success colour</h3>
+  <div class="Test-run">
+    <div class="FormField is-success">
+      <label class="FormField-label">Surname</label>
+      <input class="FormField-input" type="text" placeholder="Enter your surname">
+      <p class="FormField-text">There were no problems!</p>
+    </div>
+  </div>
+
+</div>

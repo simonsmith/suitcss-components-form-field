@@ -1,0 +1,149 @@
+/*
+ * @define FormField
+*/
+
+/**
+ * 1. Blink ignores `currentcolor` on textarea unless
+ *    a border radius value is set.
+ */
+
+:root {
+  --FormField-label-color: inherit;
+  --FormField-label-marginBottom: 0.25em;
+
+  --FormField-input-borderColor: currentcolor;
+  --FormField-input-borderRadius: 0.1px; /* 1 */
+  --FormField-input-borderWidth: 1px;
+  --FormField-input-color: inherit;
+  --FormField-input-fontFamily: inherit;
+  --FormField-input-fontSize: inherit;
+  --FormField-input-padding: 0.3em;
+
+  --FormField-text-fontSize: inherit;
+  --FormField-text-marginTop: 0.25em;
+
+  --FormField-check-gutter: 0.5em;
+
+  /* States */
+  --FormField-input-onDisabled-backgroundColor: #f2f2f2;
+  --FormField-onError-color: #d9534f;
+  --FormField-onWarning-color: #f0ad4e;
+  --FormField-onSuccess-color: #5cb85c;
+}
+
+.FormField {
+  display: block;
+  margin: 0;
+}
+
+.FormField-label {
+  color: var(--FormField-label-color);
+  display: inline-block;
+  margin-bottom: var(--FormField-label-marginBottom);
+  margin-top: 0;
+}
+
+.FormField-input {
+  background-color: #fff;
+  border-color: var(--FormField-input-borderColor);
+  border-radius: var(--FormField-input-borderRadius);
+  border-style: solid;
+  border-width: var(--FormField-input-borderWidth);
+  box-sizing: border-box;
+  color: var(--FormField-input-color);
+  display: block;
+  font-family: var(--FormField-input-fontFamily);
+  font-size: var(--FormField-input-fontSize);
+  margin: 0;
+  padding: var(--FormField-input-padding);
+  width: 100%;
+}
+
+/*
+ * Remove native search input styling
+ */
+
+.FormField-input[type="search"] {
+  appearance: none;
+}
+
+/**
+ * Reset border on certain elements for cross-browser use
+ */
+
+.FormField-input[type="file"],
+.FormField-input[type="checkbox"],
+.FormField-input[type="radio"],
+.FormField-input[type="range"] {
+  border: 0;
+}
+
+/*
+ * Ensure disabled/read-only fields are obvious to the user
+ */
+
+.FormField-input:disabled,
+.FormField-input[readonly] {
+  background-color: var(--FormField-input-onDisabled-backgroundColor);
+  cursor: not-allowed;
+}
+
+.FormField-text {
+  display: inline-block;
+  font-size: var(--FormField-text-fontSize);
+  margin-bottom: 0;
+  margin-top: var(--FormField-text-marginTop);
+}
+
+/**
+ * Additional wrapper around checkbox/radio elements.
+ * This controls alignment and allows a FormField-text to be added after
+ */
+
+.FormField-check {
+  align-items: baseline;
+  display: flex;
+}
+
+.FormField-check .FormField-input {
+  margin-right: var(--FormField-check-gutter);
+  order: 1;
+  width: auto;
+}
+
+.FormField-check .FormField-label {
+  margin-bottom: 0;
+  order: 2;
+  width: auto;
+}
+
+/**
+ * Validation states
+ */
+
+.FormField.is-error .FormField-input {
+  border-color: var(--FormField-onError-color);
+}
+
+.FormField.is-error .FormField-label,
+.FormField.is-error .FormField-text {
+  color: var(--FormField-onError-color);
+}
+
+.FormField.is-warning .FormField-input {
+  border-color: var(--FormField-onWarning-color);
+}
+
+.FormField.is-warning .FormField-label,
+.FormField.is-warning .FormField-text {
+  color: var(--FormField-onWarning-color);
+}
+
+.FormField.is-success .FormField-input {
+  border-color: var(--FormField-onSuccess-color);
+}
+
+.FormField.is-success .FormField-label,
+.FormField.is-success .FormField-text {
+  color: var(--FormField-onSuccess-color);
+}
