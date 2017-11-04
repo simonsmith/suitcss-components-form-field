@@ -12,12 +12,18 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * [npm](http://npmjs.org/): `npm install suitcss-components-form-field`
 * Download: [zip](https://github.com/simonsmith/suitcss-components-form-field/releases/latest)
 
+## Example
+
+* [**View a demo**](https://simonsmith.io/suitcss-components-form-field/test/demo.html)
+* [**View the tests**](https://simonsmith.io/suitcss-components-form-field/test/index.html)
+
 ## Available classes
 
 ### Component structure
 
 * `FormField` - Containing element. Apply state classes to this
 * `FormField-input` - Consistent rendering of various form inputs
+* `FormField-select` - Used for select elements only (instead of `FormField-input`)
 * `FormField-label` - Label text for the input
 * `FormField-text` - Used to display help text or validation messages
 * `FormField-check` - Wraps around `input` and `label` when using either radio
@@ -40,6 +46,21 @@ This works with other inputs such as `textarea`, `range` and `file`.
   <label class="FormField-label" for="surname">Surname</label>
   <input class="FormField-input" type="text" id="surname" placeholder="Enter your surname">
   <p class="FormField-text">Some optional text to the user about the input field</p>
+</div>
+```
+
+### Select elements
+
+Select elements require their own class name to ensure consistent rendering in
+Blink/Webkit.
+
+```html
+<div class="FormField">
+  <label class="FormField-label" for="select">Select</label>
+  <select class="FormField-select">
+    <option>Some option</option>
+    <option>Another option</option>
+  </select>
 </div>
 ```
 
@@ -148,6 +169,10 @@ The following achieves an inline form effect
 
 * `--FormField-text-fontSize`
 * `--FormField-text-marginTop`
+
+#### `FormField-select`
+
+* `--FormField-select-height`
 
 #### `FormField-check`
 
