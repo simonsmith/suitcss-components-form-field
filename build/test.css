@@ -561,6 +561,7 @@
   margin-top: 0;
 }
 
+.FormField-select,
 .FormField-input {
   background-color: #fff;
   border-color: currentcolor;
@@ -575,6 +576,15 @@
   margin: 0;
   padding: 0.3em;
   width: 100%;
+}
+
+/*
+ * Control height manually on select elements as Webkit/Blink does not respect
+ * padding values
+ */
+
+.FormField-select:not([size]):not([multiple]) {
+  height: 30px;
 }
 
 /*
@@ -653,7 +663,8 @@
  * Validation states
  */
 
-.FormField.is-error .FormField-input {
+.FormField.is-error .FormField-input,
+.FormField.is-error .FormField-select {
   border-color: #d9534f;
 }
 
@@ -662,7 +673,8 @@
   color: #d9534f;
 }
 
-.FormField.is-warning .FormField-input {
+.FormField.is-warning .FormField-input,
+.FormField.is-warning .FormField-select {
   border-color: #f0ad4e;
 }
 
@@ -671,7 +683,8 @@
   color: #f0ad4e;
 }
 
-.FormField.is-success .FormField-input {
+.FormField.is-success .FormField-input,
+.FormField.is-success .FormField-select {
   border-color: #5cb85c;
 }
 
