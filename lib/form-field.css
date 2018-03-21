@@ -84,8 +84,6 @@
  */
 
 .FormField-input[type="file"],
-.FormField-input[type="checkbox"],
-.FormField-input[type="radio"],
 .FormField-input[type="range"] {
   border: 0;
 }
@@ -117,16 +115,17 @@
   display: flex;
 }
 
-.FormField-check .FormField-input {
-  margin-right: var(--FormField-check-gutter);
+.FormField-checkInput {
+  box-sizing: border-box;
+  font-size: inherit;
+  margin: 0 var(--FormField-check-gutter) 0 0;
   order: 1;
-  width: auto;
+  padding: 0;
 }
 
-.FormField-check .FormField-label {
-  margin-bottom: 0;
+.FormField-checkLabel {
+  color: var(--FormField-label-color);
   order: 2;
-  width: auto;
 }
 
 /**

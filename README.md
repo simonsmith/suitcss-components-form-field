@@ -28,6 +28,8 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * `FormField-text` - Used to display help text or validation messages
 * `FormField-check` - Wraps around `input` and `label` when using either radio
   or checkbox inputs
+* `FormField-checkInput` - The `input` class when inside `FormField-check`
+* `FormField-checkLabel` - The `label` when inside `FormField-check`
 
 ### States
 
@@ -76,18 +78,18 @@ Blink/Webkit.
 
 ### Checkbox or radio input types
 
-Checkbox and radio inputs require an additional container. This controls
-positioning and allows the `FormField-text` to be rendered beneath:
+Checkbox and radio inputs require an additional container and different class names.
+This controls positioning and allows the `FormField-text` to be rendered beneath:
 
 ```html
 <div class="FormField">
   <label class="FormField-check">
-    <input class="FormField-input" name="shopping" type="radio">
-    <span class="FormField-label">Apples</span>
+    <input class="FormField-checkInput" name="shopping" type="radio">
+    <span class="FormField-checkLabel">Apples</span>
   </label>
   <label class="FormField-check">
-    <input class="FormField-input" name="shopping" type="radio">
-    <span class="FormField-label">Oranges</span>
+    <input class="FormField-checkInput" name="shopping" type="radio">
+    <span class="FormField-checkLabel">Oranges</span>
   </label>
   <span class="FormField-text">Some text about the choices above</span>
 </div>
