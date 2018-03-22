@@ -562,17 +562,22 @@
 }
 
 .FormField-select,
+.FormField-input,
+.FormField-checkInput {
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+.FormField-select,
 .FormField-input {
   background-color: #fff;
   border-color: currentcolor;
   border-radius: 0.1px;
   border-style: solid;
   border-width: 1px;
-  box-sizing: border-box;
   color: inherit;
   display: block;
   font-family: inherit;
-  font-size: inherit;
   margin: 0;
   padding: 0.3em;
   width: 100%;
@@ -602,8 +607,6 @@
  */
 
 .FormField-input[type="file"],
-.FormField-input[type="checkbox"],
-.FormField-input[type="radio"],
 .FormField-input[type="range"] {
   border: 0;
 }
@@ -641,22 +644,21 @@
   display: flex;
 }
 
-.FormField-check .FormField-input {
-  margin-right: 0.5em;
+.FormField-checkInput {
+  margin: 0 0.5em 0 0;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1;
-  width: auto;
+  padding: 0;
 }
 
-.FormField-check .FormField-label {
-  margin-bottom: 0;
+.FormField-checkLabel {
+  color: inherit;
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  width: auto;
 }
 
 /**
