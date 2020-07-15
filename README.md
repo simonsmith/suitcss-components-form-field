@@ -14,8 +14,8 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Example
 
-* [**View a demo**](https://simonsmith.io/suitcss-components-form-field/test/demo.html)
-* [**View the tests**](https://simonsmith.io/suitcss-components-form-field/test/index.html)
+* [**View a demo**](https://simonsmith.github.io/suitcss-components-form-field/test/demo.html)
+* [**View the tests**](https://simonsmith.github.io/suitcss-components-form-field/test/index.html)
 
 ## Available classes
 
