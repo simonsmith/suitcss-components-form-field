@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.1
+
+* Fix issue with elements shrinking with flex - [#2](https://github.com/simonsmith/suitcss-components-form-field/pull/2)
+
 ### 2.0.0
 
 * Separate input styles for checkbox and radio. Fixes issue with styles being
